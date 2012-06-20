@@ -6,8 +6,8 @@ module Yburst
 
     API_URL = "http://burstsms.com.au/api"
 
-    def initialize api_key, api_secret
-      @message_builder = MessageBuilder.new api_key, api_secret
+    def initialize api_key, api_secret, caller_id
+      @message_builder = MessageBuilder.new api_key, api_secret, caller_id
     end
 
     def send_message text, number, country_code

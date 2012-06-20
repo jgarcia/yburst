@@ -5,7 +5,7 @@ module Yburst
     describe "#initialize" do
       it "instantiate a new MessageBuilder" do
         MessageBuilder.should_receive :new
-        SmsSender.new "api_key", "api_secret"
+        SmsSender.new "api_key", "api_secret", "YBurst Messages"
       end
     end
 
@@ -19,7 +19,7 @@ module Yburst
         @message_builder.stub(:build).and_return("<XML Stuff here />")
         MessageBuilder.stub(:new).and_return(@message_builder)
 
-        @sender = SmsSender.new "api_key", "api_secret"
+        @sender = SmsSender.new "api_key", "api_secret", "YBurst Messages"
         SmsSender.stub(:post).and_return("queued")
       end
 
