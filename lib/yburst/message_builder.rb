@@ -14,7 +14,7 @@ module Yburst
 				<secret>#{@api_secret}</secret> 
 				<method>messages.single</method> 
 				<params> 
-					<mobile>#{clean_number}</mobile> 
+					<mobile>#{clean_number(number, country_code)}</mobile> 
 					<message>#{text}</message> 
 					<caller_id>#{@caller_id}</caller_id> 
 					<sendtime /> 
