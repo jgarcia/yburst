@@ -20,7 +20,7 @@ Or install it yourself as:
 
 Initialize Yburst
 
-    sender = Yburst::SMSSender.new <API_KEY>, <API_SECRET>, <CALLER_ID>
+    sender = Yburst::SmsSender.new <API_KEY>, <API_SECRET>, <CALLER_ID>
 
 Send a message
 
