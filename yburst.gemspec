@@ -15,5 +15,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Yburst::VERSION
 
+  gem.add_dependency "httparty"
+
   gem.add_development_dependency "rspec"
 end

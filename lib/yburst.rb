@@ -1,5 +1,6 @@
 require "yburst/version"
+require 'yburst/message_builder'
+require 'yburst/sms_sender'
 
 module Yburst
-  # Your code goes here...
 end
