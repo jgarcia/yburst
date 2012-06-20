@@ -4,8 +4,8 @@ require File.expand_path('../lib/yburst/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Joel Garcia Martinez"]
   gem.email         = ["joelgarciamartinez@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{A wapper for the Burst SMS api}
+  gem.summary       = %q{Provides a simple wrapper api around Burst Sms' http api}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)
@@ -14,4 +14,6 @@ Gem::Specification.new do |gem|
   gem.name          = "yburst"
   gem.require_paths = ["lib"]
   gem.version       = Yburst::VERSION
+
+  gem.add_development_dependency "rspec"
 end
