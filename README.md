@@ -1,6 +1,6 @@
 # Yburst
 
-TODO: Write a gem description
+A wrapper for Burst SMS 
 
 ## Installation
 
@@ -18,7 +18,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Initialize Yburst
+
+    sender = Yburst::SMSSender.new <API_KEY>, <API_SECRET>, <CALLER_ID>
+
+Send a message
+
+    sender.send_message "Hello Joe", "111-555-1234", "52"
 
 ## Contributing
 
