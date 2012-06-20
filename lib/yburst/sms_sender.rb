@@ -13,7 +13,7 @@ module Yburst
     def send_message text, number, country_code
       message = @message_builder.build(text, number, country_code)
       response = self.class.post API_URL, body: {request: message}
-      response.include? "queued"
+      response.body.include? "queued"
     end
   end
 end

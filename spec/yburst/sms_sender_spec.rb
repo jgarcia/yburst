@@ -20,7 +20,9 @@ module Yburst
         MessageBuilder.stub(:new).and_return(@message_builder)
 
         @sender = SmsSender.new "api_key", "api_secret", "YBurst Messages"
-        SmsSender.stub(:post).and_return("queued")
+        response = stub({})
+        response.stub(:body).and_return("queued")
+        SmsSender.stub(:post).and_return(response)
       end
 
       it "creates the message" do
