@@ -43,8 +43,8 @@ module Yburst
         message_builder.clean_number('(111) 555.12-34', "52").should == expected_number
       end
 
-      it 'removes leading zeros on country_code' do 
-        message_builder.clean_number('1115551234', '052').should == expected_number
+      it 'removes leading zeros in number' do 
+        message_builder.clean_number('01115551234', '52').should == expected_number
       end
     end
   end

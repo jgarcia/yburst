@@ -25,13 +25,14 @@ module Yburst
     end
 
     def clean_number number, country_code
-      remove_leading_zero(country_code) + remove_special_chars(number) 
+      country_code + remove_special_chars(number)
     end
 
     private
 
     def remove_special_chars text
-      text.gsub(/[-  .()]/, "")
+      result = text.gsub(/[-  .()]/, "")
+      remove_leading_zero(result)
     end
 
     def remove_leading_zero text
